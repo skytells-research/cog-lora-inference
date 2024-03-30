@@ -269,7 +269,12 @@ class Predictor(BasePredictor):
             raise Exception(
                 f"Missing Lora_url parameter"
             )
+        if model == "":
+            raise Exception(
+                f"Missing model parameter"
+            )
         self.MODEL_NAME = model
+        print("Loading Model: " + self.MODEL_NAME)
         lora = True
         if lora == True :
             self.is_lora = True
