@@ -42,7 +42,7 @@ import math
 
 from dataset_and_utils import TokenEmbeddingsHandler
 
-MODEL_NAME = "SG161222/RealVisXL_V2.0"
+MODEL_NAME = "SG161222/RealVisXL_V4.0"
 MODEL_CACHE = "model-cache"
 
 class KarrasDPM:
@@ -183,7 +183,7 @@ class Predictor(BasePredictor):
         self,
         model: str = Input(
             description="Diffusers Model",
-            default="SG161222/RealVisXL_V2.0",
+            default="SG161222/RealVisXL_V4.0",
         ),
         lora_url: str = Input(
             description="Load Lora model",
@@ -269,7 +269,7 @@ class Predictor(BasePredictor):
             raise Exception(
                 f"Missing Lora_url parameter"
             )
-        MODEL_NAME = model
+        self.MODEL_NAME = model
         lora = True
         if lora == True :
             self.is_lora = True
