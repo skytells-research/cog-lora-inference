@@ -42,7 +42,7 @@ import math
 
 from dataset_and_utils import TokenEmbeddingsHandler
 
-MODEL_NAME = "SG161222/RealVisXL_V4.0"
+MODEL_NAME = "SG161222/RealVisXL_V2.0"
 MODEL_CACHE = "model-cache"
 
 class KarrasDPM:
