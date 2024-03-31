@@ -181,10 +181,6 @@ class Predictor(BasePredictor):
     @torch.inference_mode()
     def predict(
         self,
-        model: str = Input(
-            description="Diffusers Model",
-            default="SG161222/RealVisXL_V4.0",
-        ),
         lora_url: str = Input(
             description="Load Lora model",
         ),
@@ -269,12 +265,7 @@ class Predictor(BasePredictor):
             raise Exception(
                 f"Missing Lora_url parameter"
             )
-        if model == "":
-            raise Exception(
-                f"Missing model parameter"
-            )
-        self.MODEL_NAME = model
-        print("Loading Model: " + self.MODEL_NAME)
+      
         lora = True
         if lora == True :
             self.is_lora = True
