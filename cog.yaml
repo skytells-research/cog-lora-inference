@@ -11,7 +11,7 @@ build:
     - "torch==2.0.1"
     - "torchvision"
     - "transformers"
-    - "diffusers"
+    - "diffusers==0.25.0"
     - "accelerate"
     - "safetensors"
     - "pandas"
