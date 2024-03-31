@@ -1,4 +1,4 @@
-# SG161222/RealVisXL_V2.0 LoRA inference Cog model
+# SG161222/RealVisXL_V4.0 LoRA inference Cog model
 
 This is an implementation of the [SG161222/RealVisXL_VV.0](https://huggingface.co/SG161222/RealVisXL_V2V.0) as a Cog model. [Cog packages machine learning models as standard containers.](https://github.com/replicate/cog)
 
