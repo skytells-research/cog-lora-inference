@@ -42,7 +42,7 @@ import math
 
 from dataset_and_utils import TokenEmbeddingsHandler
 
-MODEL_NAME = "SG161222/RealVisXL_V2.0"
+MODEL_NAME = "SG161222/Realistic_Vision_V6.0_B1_noVAE"
 MODEL_CACHE = "model-cache"
 
 class KarrasDPM:
@@ -217,10 +217,10 @@ class Predictor(BasePredictor):
         scheduler: str = Input(
             description="scheduler",
             choices=SCHEDULERS.keys(),
-            default="DPMSolverMultistep",
+            default="K_EULER",
         ),
         num_inference_steps: int = Input(
-            description="Number of denoising steps", ge=1, le=500, default=50
+            description="Number of denoising steps", ge=1, le=500, default=35
         ),
         guidance_scale: float = Input(
             description="Scale for classifier-free guidance", ge=1, le=50, default=7.5
@@ -257,7 +257,7 @@ class Predictor(BasePredictor):
             description="LoRA additive scale. Only applicable on trained models.",
             ge=0.0,
             le=1.0,
-            default=0.6,
+            default=0.65,
         ),
     ) -> List[Path]:
         # Check if there is a lora_url
